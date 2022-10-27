@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout 1</title>
+        <style>
+            *
+            {
+                box-sizing: border-box;
+            }
+            body
+            {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+                margin: 0;
+            }
+
+            .headerContainer, .footerContainer
+            {
+                background: yellowgreen;
+                height: 20vh;
+            }
+
+            #mainContainer
+            {
+                display: flex;
+                flex: 1;
+            }
+            #mainContainer > article
+            {
+                flex: 1;
+                order: 1;
+            }
+
+            #mainContainer > nav, #mainContainer > aside
+            {
+                flex: 0 0 20vw;   
+            }
+
+            #mainContainer > nav
+            {
+                background:hotpink ;
+                order: 3;
+            }
+
+            #mainContainer > aside
+            {
+                background: lightblue;
+                order: 2;
+            }
+
+            .headerContainer, .footerContainer, article, nav, aside
+            {
+                padding: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer"><h1>HEADER</h1></header>
+        <div id="mainContainer">
+            <section1>
+                <article>
+                    <h2>First article</h2>
+                    <p>You wake up in the morning, and lo! your purse is magically filled with twenty-four hours of the unmanufactured tissue of the universe of your life! It is yours....</p>
+                </article>
+                <article>
+                    <h2>Second article</h2>
+                    <p>Provide people with information about their actions in real time, then give them a chance to change those actions, pushing them toward better behaviors</p>
+                </article>
+                <article>
+                    <h2>Third article</h2>
+                    <p>Being a human is hard. We know the sorts of choices we ought to make, and we earnestly intend to make them, but when the time comes, we don’t...</p>
+                </article>
+            </section1>
+            <nav>Nav</nav>
+            <aside>Aside</aside>
+            
+        </div>
+        <footer class="footerContainer">Footer</footer>
+    </body>
+</html>
